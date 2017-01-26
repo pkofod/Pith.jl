@@ -5,7 +5,7 @@ using StatsFuns
 export pith
 include("kernels.jl")
 
-function pith{T}(x, X::Vector{T}, Y, m::Kernel = Gaussian())
+function pith{T}(x, X::Vector{T}, m::Kernel = Gaussian())
     n = length(X)
     ĝ = zeros(T, n)
     h = (1.364 * std(X))/(pi*n^(1/5))
